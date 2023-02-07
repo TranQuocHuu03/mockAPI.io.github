@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Admin</title>
+
+  <link href="admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+    rel="stylesheet">
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link href="admin/css/sb-admin-2.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+
+
+</head>
+
+<body id="page-top" onload="show()">
+
+
+  <div id="wrapper">
+
+    <div id="content-wrapper" class="d-flex flex-column">
+
+      <div id="content">
+
+        <div class="container-fluid">
+          <div id="divAddHotel" >
+          <div class="row" style="padding-bottom: 20px">
+            <div class="col">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">Name:</span>
+              </div>
+              <input type="text" class="form-control" id="nameproduct" />
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">Price:</span>
+              </div>
+              <input type="text" class="form-control" id="priceproduct" />
+            </div>
+            <div class="col">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">Note:</span>
+              </div>
+              <input type="text" class="form-control" id="noteproduct" />
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3"
+                  >Detail:</span
+                >
+              </div>
+              <input type="text" class="form-control" id="detailproduct" />
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon3">Image</span>
+              </div>
+              <div>
+                <input type="file" name="img" id="imgproduct"  />
+              </div>
+            </div>
+          </div>
+          <div id="ok">
+            <button type="submit" onclick="save()" class="btn btn-primary">
+              Save
+            </button>
+            <button type="button" onclick="reset()" class="btn btn-warning">
+              reset
+            </button>
+          </div>
+          <div id="edit"></div>
+        </div>
+          <div class="card shadow mb-4">
+              <div class="card-header py-3">
+                  <button id="themmoi" onclick="them()" class="btn btn-primary">Thêm mới</button>
+                  <button id="huy" onclick="removeHotel()" class="btn btn-danger"><i class="fas fa-times"></i>Huỷ</button>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                      <tr>
+                        <th>ID</th>
+                        <th>Tên phòng</th>
+                        <th></th>
+                        <th>Giá tiền</th>
+                        <th>Vị trí</th>
+                        <th>Sửa</th>
+                        <th>Xoá</th>
+                      </tr>
+                    </thead>
+                    <tbody id="tab">
+            
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fas fa-angle-up"></i>
+  </a>
+
+  <!-- Logout Modal-->
+  <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Bạn có chắc muốn đăng xuất</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Thoát</button>
+          <a class="btn btn-primary" href="login.html">Đăng xuất</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="adminHotel.js"></script>
+  <script src="admin/vendor/jquery/jquery.min.js"></script>
+  <script src="admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="admin/js/sb-admin-2.min.js"></script>
+
+
+</body>
+
+</html>
